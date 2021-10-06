@@ -9,7 +9,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
 app.config['SQLALCHEMY_BINDS'] = {'first_db': 'mysql://root:anubhaba@localhost/sqldatabase',
                                   'second_db': 'postgresql://root:anubhaba@localhost/postgredatabase'}
 
-
 # Database Initialization
 db = SQLAlchemy(app)
 
@@ -53,4 +52,4 @@ def mysqlpage():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80,debug=True)
+    app.run(host='0.0.0.0', port=80)
