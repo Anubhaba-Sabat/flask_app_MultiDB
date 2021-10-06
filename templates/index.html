@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Flask App</title>
+</head>
+<body>
+<h2>This is {{page_name}}</h2>
+{% if page_name != "Home Page" %}
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>item</th>
+        <th>value</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for data in results %}
+    <tr>
+        <td>{{data.id}}</td>
+        <td>{{data.item}}</td>
+        <td>{{data.itemvalue}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif%}
+</body>
+</html>
